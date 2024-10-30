@@ -1,18 +1,20 @@
 public class ServiceStation implements ServiceStationInterfase {
 
-    @Override
     public void check(Transport transport) {
-        System.out.println("Обслуживаем " + transport.getModelName());
+        transport.service(this);
 
-        for (int i = 0; i < transport.getWheelsCount(); i++) {
-            updateTyre();
-        }
-        if (transport instanceof Car || transport instanceof Truck) {
-            checkEngine();
-        }
-        if (transport instanceof Truck) {
-            checkTrailer();
-        }
+    }
+
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
     }
 }
 

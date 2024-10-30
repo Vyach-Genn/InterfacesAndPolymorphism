@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
 
     private String modelName;
     private int wheelsCount;
@@ -16,8 +16,6 @@ public class Transport {
         return wheelsCount;
     }
 
-    public void service(ServiceStation station) {
-        station.check(this);
-    }
+    public abstract void service(ServiceStation station);
 
 }

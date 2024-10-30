@@ -1,17 +1,9 @@
 public interface ServiceStationInterfase {
 
-    void check(Transport transport);
+    void updateTyre();
 
-    default void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
+    void checkEngine();
 
-    default void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-
-    default void checkTrailer() {
-        System.out.println("Проверяем прицеп");
-    }
+    void checkTrailer();
 
 }
